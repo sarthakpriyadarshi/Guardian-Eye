@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Webcam Stream</title>
+</head>
+
+<body>
+    <h1 class="top-name">Guardian Eye 👁️</h1>
+    <video id="video" autoplay></video>
+    <button id="capture-btn">Capture</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script>
+        const video = document.getElementById('video');
+
+        // Access the webcam
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(stream => {
+                video.srcObject = stream;
+            })
+            .catch(err => {
+                console.error('Error accessing the webcam:', err);
+            });
+
+        // GSAP animation
+        gsap.from('.top-name', { duration: 3, opacity: 0, ease: "power2.inOut" });
+    </script>
+</body>
+
+</html>

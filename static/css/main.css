@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1A1A1A;
+}
+
+h1 {
+    font-size: 35px;
+    color: cyan;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#video{
+    display: block;
+    margin: 0 auto;
+    border: 4px solid #ccc;
+    border-radius: 10px;
+    border-color: #87CA12;
+    width: 90%; /* Take up 90% of the parent container width */
+    max-width: 640px; /* Maximum width for the video */
+}
+
+#capture-btn {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: cyan;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    min-height: 58px;
+    min-width: 0;
+    outline: none;
+    padding: 17px 2px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 90%; /* Take up 90% of the parent container width */
+    max-width: 300px; /* Maximum width for the button */
+}
+
+#capture-btn:disabled {
+    pointer-events: none;
+}
+
+#capture-btn:hover {
+    color: white;
+    background-color: #5083f2;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+#capture-btn:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 24px; /* Smaller font size on small screens */
+    }
+}
+
+@media screen and (max-width: 603px) {
+    h1 {
+        font-size: 40px; /* Larger font size on very small screens */
+    }
+}
